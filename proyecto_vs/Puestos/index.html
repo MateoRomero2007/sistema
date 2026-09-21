@@ -1,0 +1,1317 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa de Puestos</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+
+    <div class="contenedor">
+
+        <header class="encabezado">
+            <h1>MAPA DE PUESTOS</h1>
+            <label class="filtro-area" for="filtroArea">
+                <span>ÁREA</span>
+                <select id="filtroArea">
+                    <option value="todas">TODAS LAS ÁREAS</option>
+                </select>
+            </label>
+            <div class="fecha" data-fecha-hoy></div>
+        </header>
+
+        <div class="mapa-escala">
+
+        <main class="mapa">
+
+            <div class="sala sala-innovacion">
+                <span>SALA</span>
+                <strong>INNOVACIÓN</strong>
+            </div>
+
+            <div class="sala sala-experiencia">
+                <span>SALA</span>
+                <strong>EXPERIENCIA</strong>
+            </div>
+
+            <div
+                class="puesto no-reservable lider-general"
+                data-nombre="Daniel Tamayo"
+                data-area="Todas las áreas"
+                data-dia-casa="No tiene día en casa"
+                data-puesto="Siempre ocupado"
+                data-horario="No exacto"
+                data-observacion="Su puesto no puede ser ocupado por nadie"
+                data-motivo="Líder general de todas las áreas."
+            >
+                <img src="iconos/backend/danielt.webp" alt="Daniel Tamayo">
+            </div>
+
+            <div class="grupo puestos-izquierda">
+
+                <div
+                    class="puesto libre"
+                    data-codigo="P001"
+                    data-puesto="Puesto 06"
+                    data-nombre="Jesus David Rivera"
+                    data-area="Inteligencia Artificial"
+                    data-dia-casa="No tiene"
+                    data-horario="8:00 AM - 5:00 PM"
+                    data-observacion="No trabaja desde casa, no reservable."
+                >
+                    <img src="iconos/Inteligencia artificial/jesus.webp" alt="">
+                </div>
+
+                <div
+                    class="puesto libre"
+                    data-codigo="P002"
+                    data-puesto="Puesto 03"
+                    data-nombre="Nicolas Zapata"
+                    data-area="Inteligencia Artificial"
+                    data-dia-casa="Miercoles"
+                    data-horario="8:00 AM - 5:00 PM"
+                    data-observacion="Sin observaciones"
+                >
+                    <img src="iconos/Inteligencia artificial/nicolas.webp" alt="">
+                </div>
+
+                <div
+                    class="puesto libre"
+                    data-codigo="P003"
+                    data-puesto="Puesto 05"
+                    data-nombre="Anderson Alvarez"
+                    data-area="Inteligencia Artificial"
+                    data-dia-casa="No tiene"
+                    data-horario="8:00 AM - 5:00 PM"
+                    data-observacion="Sin observaciones"
+                >
+                    <img src="iconos/Inteligencia artificial/andersonalvarez.webp" alt="">
+                </div>
+
+                <div
+                    class="puesto libre"
+                    data-codigo="P004"
+                    data-puesto="Puesto 02"
+                    data-nombre="Luis Alejandro Torres"
+                    data-area="Inteligencia Artificial"
+                    data-dia-casa="Jueves"
+                    data-horario="8:00 AM - 5:00 PM"
+                    data-observacion="Sin observaciones"
+                >
+                    <img src="iconos/Inteligencia artificial/alejandro.webp" alt="">
+                </div>
+
+                <div
+                    class="puesto libre"
+                    data-codigo="P005"
+                    data-puesto="Puesto 04"
+                    data-nombre="Segrera"
+                    data-area="Inteligencia Artificial"
+                    data-horario="8:00 AM - 5:00 PM"
+                    data-observacion="Sin observaciones"
+                    data-dia-casa="Aún no definido"
+                >
+                    <img src="iconos/Inteligencia artificial/segrera.webp" alt="Inteligencia artificial">
+                </div>
+
+                <div
+                    class="puesto libre"
+                    data-codigo="P006"
+                    data-puesto="Puesto 01"
+                    data-nombre="Natalia Perez"
+                    data-area="Inteligencia Artificial"
+                    data-dia-casa="Miercoles"
+                    data-horario="8:00 AM - 5:00 PM"
+                    data-observacion="Sin observaciones"
+                >
+                    <img src="iconos/Inteligencia artificial/natalia.jpg" alt="">
+                </div>
+
+            </div>
+
+
+
+            <div class="grupo puestos-izquierda-2">
+
+                <div
+                    class="puesto no-reservable lider"
+                    data-codigo="P063"
+                    data-nombre="Estefania"
+                    data-area="Transversal"
+                    data-motivo="Puesto de líder: reservado exclusivamente para la persona líder del equipo."
+                >
+                    <img src="iconos/transversales/estefania.webp" alt="Estefania">
+                </div>
+
+                <div
+                    class="puesto libre"
+                    data-codigo="P007"
+                    data-puesto="Puesto 03"
+                    data-nombre="Carolina Perez"
+                    data-area="Transversal"
+                    data-dia-casa="Jueves"
+                    data-horario="8:00 AM - 5:00 PM"
+                    data-observacion="Sin observaciones"
+                >
+                    <img src="iconos/transversales/carolina.webp" alt="">
+                </div>
+
+                <div
+                    class="puesto libre"
+                    data-codigo="P008"
+                    data-puesto="Puesto 05"
+                    data-nombre="Laura Ramirez"
+                    data-area="Transversal"
+                    data-dia-casa="No tiene"
+                    data-horario="8:00 AM - 5:00 PM"
+                    data-observacion="No trabaja desde casa"
+                >
+                    <img src="iconos/transversales/ramirez.webp" alt="">
+                </div>
+
+                <div
+                    class="puesto libre"
+                    data-codigo="P009"
+                    data-puesto="Puesto 02"
+                    data-nombre="Kelly Muñoz"
+                    data-area="Transversal"
+                    data-dia-casa="No tiene"
+                    data-horario="8:00 AM - 5:00 PM"
+                    data-observacion="No trabaja desde casa"
+                >
+                    <img src="iconos/transversales/kelly.webp" alt="">
+                </div>
+
+                <div
+                    class="puesto libre"
+                    data-codigo="P010"
+                    data-puesto="Puesto 04"
+                    data-nombre="Jennifer Sotelo Perez"
+                    data-area="Transversal"
+                    data-dia-casa="No tiene"
+                    data-horario="8:00 AM - 5:00 PM"
+                    data-observacion="No trabaja desde casa"
+                >
+                    <img src="iconos/transversales/jennnifer.webp" alt="">
+                </div>
+
+                <div
+                    class="puesto libre"
+                    data-codigo="P011"
+                    data-puesto="Puesto 01"
+                    data-nombre="Ronald Jimenez Pelaez"
+                    data-area="Gestion de software"
+                    data-dia-casa="Martes"
+                    data-horario="8:00 AM - 5:00 PM"
+                    data-observacion="Sin observaciones"
+                >
+                    <img src="iconos/gestion de software/ronald.webp" alt="">
+                </div>
+
+            </div>
+            <div class="grupo columna-central">
+
+                <div
+                    class="puesto libre"
+                    data-codigo="P012"
+                    data-puesto="Puesto 01"
+                    data-nombre="Joan Sebastian Vivas Caicedo"
+                    data-area="Bi Datas"
+                    data-dia-casa="Viernes"
+                    data-horario="8:00 AM - 5:00 PM"
+                    data-observacion="Sin observaciones"
+                >
+                    <img src="iconos/Bi datas/caicedo.jpg" alt="">
+                </div>
+
+                <div
+                    class="puesto libre"
+                    data-codigo="P013"
+                    data-puesto="Puesto 16"
+                    data-nombre="Christian Andrés Ramirez"
+                    data-area="Bi Datas"
+                    data-dia-casa="Jueves"
+                    data-horario="8:00 AM - 5:00 PM"
+                    data-observacion="Sin observaciones"
+                >
+                    <img src="iconos/Bi datas/christian.jpg" alt="">
+                </div>
+
+                <div
+                    class="puesto libre"
+                    data-codigo="P014"
+                    data-puesto="Puesto 02"
+                    data-nombre="Duvan Esteban Jaramillo"
+                    data-area="Bi Datas"
+                    data-dia-casa="Lunes"
+                    data-horario="8:00 AM - 5:00 PM"
+                    data-observacion="Sin observaciones"
+                >
+                    <img src="iconos/Bi datas/jaramillo.webp" alt="">
+                </div>
+
+                <div
+                    class="puesto libre"
+                    data-codigo="P015"
+                    data-puesto="Puesto 15"
+                    data-nombre="Jose David Cartagena"
+                    data-area="Bi Datas"
+                    data-dia-casa="Martes"
+                    data-horario="8:00 AM - 5:00 PM"
+                    data-observacion="Sin observaciones"
+                >
+                    <img src="iconos/Bi datas/martinez.webp" alt="">
+                </div>
+
+                <div
+                    class="puesto libre"
+                    data-codigo="P016"
+                    data-puesto="Puesto 03"
+                    data-nombre="Jhon Eferson Castaño"
+                    data-area="Bi Datas"
+                    data-dia-casa="Jueves"
+                    data-horario="8:00 AM - 5:00 PM"
+                    data-observacion="Sin observaciones"
+                >
+                    <img src="iconos/Bi datas/efer.webp" alt="">
+                </div>
+
+                <div
+                    class="puesto libre"
+                    data-codigo="P017"
+                    data-puesto="Puesto 14"
+                    data-nombre="Elkin Amador"
+                    data-area="Bi Datas"
+                    data-dia-casa="Viernes"
+                    data-horario="8:00 AM - 5:00 PM"
+                    data-observacion="Sin observaciones"
+                >
+                    <img src="iconos/Bi datas/amador.jpg" alt="">
+                </div>
+
+                <div
+                    class="puesto no-reservable lider"
+                    data-codigo="P064"
+                    data-nombre="Julieth"
+                    data-area="Bi Datas"
+                    data-motivo="Puesto de líder: reservado exclusivamente para la persona líder del equipo."
+                >
+                    <img src="iconos/Bi datas/julieth.webp" alt="">
+                </div>
+
+                <div
+                    class="puesto libre"
+                    data-codigo="P018"
+                    data-puesto="Puesto 13"
+                    data-nombre="Anderson Yepes"
+                    data-area="Front"
+                    data-dia-casa="Lunes"
+                    data-horario="7:30 AM - 4:30 PM"
+                    data-observacion="Sin observaciones"
+                >
+                    <img src="iconos/front/anderson.webp" alt="">
+                </div>
+
+                <div
+                    class="puesto libre"
+                    data-codigo="P019"
+                    data-puesto="Puesto 05"
+                    data-nombre="David Velasquez"
+                    data-area="Gestion de software"
+                    data-dia-casa="Viernes"
+                    data-horario="8:00 AM - 5:00 PM"
+                    data-observacion="Sin observaciones"
+                >
+                    <img src="iconos/gestion de software/david.webp" alt="David Velasquez">
+                </div>
+
+                <div
+                    class="puesto libre"
+                    data-codigo="P020"
+                    data-puesto="Puesto 12"
+                    data-nombre="Juan Manuel Lopez"
+                    data-area="Gestion de software"
+                    data-dia-casa="Lunes"
+                    data-horario="8:00 AM - 5:00 PM"
+                    data-observacion="Sin observaciones"
+                >
+                    <img src="iconos/gestion de software/manuel.webp" alt="Juan Manuel Lopez">
+                </div>
+
+                <div
+                    class="puesto libre"
+                    data-codigo="P021"
+                    data-puesto="Puesto 06"
+                    data-nombre="Karol Navia"
+                    data-area="Gestion de software"
+                    data-dia-casa="Miercoles"
+                    data-ubicacion="Columna central"
+                    data-horario="8:00 AM - 5:00 PM"
+                    data-observacion="Sin observaciones"
+                >
+                    <img src="iconos/gestion de software/navia.webp" alt="Karol Navia">
+                </div>
+
+                <div
+                    class="puesto libre"
+                    data-codigo="P022"
+                    data-puesto="Puesto 11"
+                    data-nombre="Andres Ramirez"
+                    data-area="Gestion de software"
+                    data-dia-casa="Jueves"
+                    data-ubicacion="Columna central"
+                    data-horario="8:00 AM - 5:00 PM"
+                    data-observacion="Sin observaciones"
+                >
+                    <img src="iconos/gestion de software/andres.webp" alt="Andres Ramirez">
+                </div>
+
+                <div
+                    class="puesto no-reservable lider"
+                    data-codigo="P065"
+                    data-nombre="Monica"
+                    data-area="Gestion de software"
+                    data-motivo="Puesto de líder: reservado exclusivamente para la persona líder del equipo."
+                >
+                    <img src="iconos/gestion de software/monica.webp" alt="Monica">
+                </div>
+
+                <div
+                    class="puesto libre"
+                    data-codigo="P023"
+                    data-puesto="Puesto 10"
+                    data-nombre="Edwar"
+                    data-area="Gestion de software"
+                    data-dia-casa="Miercoles"
+                    data-ubicacion="Columna central"
+                    data-horario="8:00 AM - 5:00 PM"
+                    data-observacion="Sin observaciones"
+                >
+                    <img src="iconos/gestion de software/edwar.webp" alt="Edwar">
+                </div>
+
+                <div
+                    class="puesto libre"
+                    data-codigo="P024"
+                    data-puesto="Puesto 08"
+                    data-nombre="Sebastian Pertuz"
+                    data-area="Gestion de Software"
+                    data-dia-casa="Martes"
+                    data-ubicacion="Columna central"
+                    data-horario="8:00 AM - 5:00 PM"
+                    data-observacion="Sin observaciones"
+                >
+                    <img src="iconos/gestion de software/pertuz.jpg" alt="Sebastian Pertuz">
+                </div>
+
+                <div
+                    class="puesto libre"
+                    data-codigo="P025"
+                    data-puesto="Puesto 09"
+                    data-nombre="Luis Zuluaga"
+                    data-area="Gestion de software"
+                    data-dia-casa="Viernes"
+                    data-ubicacion="Columna central"
+                    data-horario="8:00 AM - 5:00 PM"
+                    data-observacion="Sin observaciones"
+                >
+                    <img src="iconos/gestion de software/luis.webp" alt="Luis Zuluaga">
+                </div>
+
+            </div>
+
+            <div class="grupo columna-derecha">
+
+                <div
+                    class="puesto libre"
+                    data-codigo="P026"
+                    data-puesto="Puesto 01"
+                    data-nombre="Theodoro Dikuyama"
+                    data-area="Front"
+                    data-dia-casa="Martes"
+                    data-ubicacion="Columna derecha"
+                    data-horario="8:00 AM - 5:00 PM"
+                    data-observacion="Sin observaciones"
+                >
+                    <img src="iconos/front/theodoro.webp" alt="Theodoro Dikuyama">
+                </div>
+
+                <div
+                    class="puesto libre"
+                    data-codigo="P027"
+                    data-puesto="Puesto 16"
+                    data-nombre="Sebastian Giraldo"
+                    data-area="Front"
+                    data-dia-casa="Viernes"
+                    data-ubicacion="Columna derecha"
+                    data-horario="8:00 AM - 5:00 PM"
+                    data-observacion="Sin observaciones"
+                >
+                    <img src="iconos/front/giraldo.webp" alt="Sebastian Giraldo">
+                </div>
+
+                <div
+                    class="puesto no-reservable lider"
+                    data-codigo="P066"
+                    data-nombre="Porras"
+                    data-area="Front"
+                    data-motivo="Puesto de líder: reservado exclusivamente para la persona líder del equipo."
+                >
+                    <img src="iconos/front/porras.webp" alt="Porras">
+                </div>
+
+                <div
+                    class="puesto libre"
+                    data-codigo="P028"
+                    data-puesto="Puesto 15"
+                    data-nombre="Yuly Gomez"
+                    data-area="Front"
+                    data-dia-casa="Viernes"
+                    data-ubicacion="Columna derecha"
+                    data-horario="8:00 AM - 5:00 PM"
+                    data-observacion="Sin observaciones"
+                >
+                    <img src="iconos/front/yuly.webp" alt="Yuly Gomez">
+                </div>
+
+                <div
+                    class="puesto no-reservable lider"
+                    data-codigo="P067"
+                    data-nombre="Algarin"
+                    data-area="SiteBuilder"
+                    data-motivo="Puesto de líder: reservado exclusivamente para la persona líder del equipo."
+                >
+                    <img src="iconos/SiteBuilder/algarin.webp" alt="Algarin">
+                </div>
+
+                <div
+                    class="puesto libre"
+                    data-codigo="P029"
+                    data-puesto="Puesto 14"
+                    data-nombre="Karen Herrera"
+                    data-area="Front"
+                    data-dia-casa="viernes"
+                    data-ubicacion="Columna derecha"
+                    data-horario="8:00 AM - 5:00 PM"
+                    data-observacion="Sin observaciones"
+                >
+                    <img src="iconos/front/karen.webp" alt="Karen Herrera">
+                </div>
+
+                <div
+                    class="puesto libre"
+                    data-codigo="P030"
+                    data-puesto="Puesto 04"
+                    data-nombre="Jose Solorzano"
+                    data-area="SiteBuilder"
+                    data-dia-casa="Viernes"
+                    data-ubicacion="Columna derecha"
+                    data-horario="8:00 AM - 5:00 PM"
+                    data-observacion="Sin observaciones"
+                >
+                    <img src="iconos/SiteBuilder/solorzano.webp" alt="Jose Solorzano">
+                </div>
+
+                <div
+                    class="puesto libre"
+                    data-codigo="P031"
+                    data-puesto="Puesto 13"
+                    data-nombre="Jonathan Peña"
+                    data-area="SiteBuilder"
+                    data-dia-casa="Martes"
+                    data-ubicacion="Columna derecha"
+                    data-horario="8:00 AM - 5:00 PM"
+                    data-observacion="Sin observaciones"
+                >
+                    <img src="iconos/SiteBuilder/jonathan.webp" alt="Jonathan Peña">
+                </div>
+
+                <div
+                    class="puesto libre"
+                    data-codigo="P032"
+                    data-puesto="Puesto 05"
+                    data-nombre="Elkin Murilllo"
+                    data-area="SiteBuilder"
+                    data-dia-casa="Jueves"
+                    data-ubicacion="Columna derecha"
+                    data-horario="8:00 AM - 5:00 PM"
+                    data-observacion="Sin observaciones"
+                >
+                    <img src="iconos/SiteBuilder/elkin.webp" alt="Elkin Murilllo">
+                </div>
+
+                <div
+                    class="puesto libre"
+                    data-codigo="P033"
+                    data-puesto="Puesto 12"
+                    data-nombre="Santiago Peña"
+                    data-area="Diseño"
+                    data-dia-casa="Miercoles"
+                    data-ubicacion="Columna derecha"
+                    data-horario="8:00 AM - 5:00 PM"
+                    data-observacion="Sin observaciones"
+                >
+                    <img src="iconos/diseño/santiago.png" alt="Santiago Peña">
+                </div>
+
+                <div
+                    class="puesto libre"
+                    data-codigo="P034"
+                    data-puesto="Puesto 06"
+                    data-nombre="Jonathan Uribe"
+                    data-area="Diseño"
+                    data-dia-casa="Lunes"
+                    data-ubicacion="Columna derecha"
+                    data-horario="8:00 AM - 5:00 PM"
+                    data-observacion="Sin observaciones"
+                >
+                    <img src="iconos/diseño/uribe.webp" alt="Jonathan Uribe">
+                </div>
+
+                <div
+                    class="puesto libre"
+                    data-codigo="P035"
+                    data-puesto="Puesto 11"
+                    data-nombre="Esteban Lasso"
+                    data-area="Diseño"
+                    data-dia-casa="Jueves"
+                    data-ubicacion="Columna derecha"
+                    data-horario="8:00 AM - 5:00 PM"
+                    data-observacion="Sin observaciones"
+                >
+                    <img src="iconos/diseño/lasso.webp" alt="Esteban Lasso">
+                </div>
+
+                <div
+                    class="puesto libre"
+                    data-codigo="P036"
+                    data-puesto="Puesto 07"
+                    data-nombre="Jose Martinez"
+                    data-area="Diseño"
+                    data-dia-casa="Lunes"
+                    data-ubicacion="Columna derecha"
+                    data-horario="8:00 AM - 5:00 PM"
+                    data-observacion="Sin observaciones"
+                >
+                    <img src="iconos/diseño/josemartinez.webp" alt="Jose Martinez">
+                </div>
+
+                <div
+                    class="puesto libre"
+                    data-codigo="P037"
+                    data-puesto="Puesto 10"
+                    data-nombre="Laura Rojas"
+                    data-area="Diseño"
+                    data-dia-casa="Miercoles"
+                    data-ubicacion="Columna derecha"
+                    data-horario="8:00 AM - 5:00 PM"
+                    data-observacion="Sin observaciones"
+                >
+                    <img src="iconos/diseño/laura.webp" alt="Laura Rojas">
+                </div>
+
+                <div
+                    class="puesto no-reservable lider"
+                    data-codigo="P068"
+                    data-nombre="Miranda"
+                    data-area="Diseño"
+                    data-motivo="Puesto de líder: reservado exclusivamente para la persona líder del equipo."
+                >
+                    <img src="iconos/diseño/miranda.webp" alt="Miranda">
+                </div>
+
+                <div
+                    class="puesto libre"
+                    data-codigo="P038"
+                    data-puesto="Puesto 09"
+                    data-nombre="Natalia Urrego"
+                    data-area="Diseño"
+                    data-dia-casa="Viernes"
+                    data-ubicacion="Columna derecha"
+                    data-horario="8:00 AM - 5:00 PM"
+                    data-observacion="Sin observaciones"
+                >
+                    <img src="iconos/diseño/natalia.webp" alt="Natalia Urrego">
+                </div>
+
+            </div>
+
+
+            <div class="grupo columna-derecha-2">
+
+                <div
+                    class="puesto libre"
+                    data-codigo="P039"
+                    data-puesto="Puesto 01"
+                    data-nombre="Yulian"
+                    data-area="Incidentes"
+                    data-dia-casa="Aleatorio"
+                    data-ubicacion="Zona derecha"
+                    data-horario="8:00 AM - 5:00 PM"
+                    data-observacion="Puede ser cualquier día desde casa. Varias personas pueden tomarlo en la misma semana."
+                >
+                    <img src="iconos/incidentes/yulian.webp" alt="Variable">
+                </div>
+
+                <div
+                    class="puesto libre"
+                    data-codigo="P040"
+                    data-puesto="Puesto 16"
+                    data-nombre="Laura Molina Estrada"
+                    data-area="Incidentes"
+                    data-dia-casa="Miercoles"
+                    data-ubicacion="Zona derecha"
+                    data-horario="8:00 AM - 5:00 PM"
+                    data-observacion="Sin observaciones"
+                >
+                    <img src="iconos/incidentes/lauram.webp" alt="Laura Molina Estrada">
+                </div>
+
+                <div
+                    class="puesto libre"
+                    data-codigo="P041"
+                    data-puesto="Puesto 02"
+                    data-nombre="Jeison Martinez"
+                    data-area="Front"
+                    data-dia-casa="Jueves"
+                    data-ubicacion="Zona derecha"
+                    data-horario="8:00 AM - 5:00 PM"
+                    data-observacion="Sin observaciones"
+                >
+                    <img src="iconos/front/jeison.webp" alt="Jeison Martinez">
+                </div>
+
+                <div
+                    class="puesto libre"
+                    data-codigo="P042"
+                    data-puesto="Puesto 15"
+                    data-nombre="Gabriel Carmona"
+                    data-area="Incidentes"
+                    data-dia-casa="Aleatorio"
+                    data-ubicacion="Zona derecha"
+                    data-horario="8:00 AM - 5:00 PM"
+                    data-observacion="Sin observaciones"
+                >
+                    <img src="iconos/incidentes/gabriel.webp" alt="Gabriel Carmona">
+                </div>
+
+                <div
+                    class="puesto libre"
+                    data-codigo="P043"
+                    data-puesto="Puesto 03"
+                    data-nombre="Juan Jose Marin"
+                    data-area="Front"
+                    data-dia-casa="Miercoles"
+                    data-ubicacion="Zona derecha"
+                    data-horario="8:00 AM - 5:00 PM"
+                    data-observacion="Sin observaciones"
+                >
+                    <img src="iconos/front/marin.webp" alt="Juan Jose Marin">
+                </div>
+
+                <div
+                    class="puesto libre"
+                    data-codigo="P044"
+                    data-puesto="Puesto 14"
+                    data-nombre="Diego Alejandro Bedoya"
+                    data-area="Integraciones"
+                    data-dia-casa="Viernes"
+                    data-ubicacion="Zona derecha"
+                    data-horario="8:00 AM - 5:00 PM"
+                    data-observacion="Sin observaciones"
+                >
+                    <img src="iconos/integraciones/diego.webp" alt="Diego Alejandro Bedoya">
+                </div>
+
+                <div
+                    class="puesto libre"
+                    data-codigo="P045"
+                    data-puesto="Puesto 04"
+                    data-nombre="Carlos Damian Cano"
+                    data-area="Front"
+                    data-dia-casa="Viernes"
+                    data-ubicacion="Zona derecha"
+                    data-horario="8:00 AM - 5:00 PM"
+                    data-observacion="Sin observaciones"
+                >
+                    <img src="iconos/front/damian.webp" alt="Carlos Damian Cano">
+                </div>
+
+                <div
+                    class="puesto libre"
+                    data-codigo="P046"
+                    data-puesto="Puesto 13"
+                    data-nombre="Juan Esteban Lopez"
+                    data-area="Integraciones"
+                    data-dia-casa="Jueves"
+                    data-ubicacion="Zona derecha"
+                    data-horario="8:00 AM - 5:00 PM"
+                    data-observacion="Sin observaciones"
+                >
+                    <img src="iconos/integraciones/esteban.webp" alt="Juan Esteban Lopez">
+                </div>
+
+                <div
+                    class="puesto libre"
+                    data-codigo="P047"
+                    data-puesto="Puesto 05"
+                    data-nombre="Davison Arley Valencia"
+                    data-area="Integraciones"
+                    data-dia-casa="Miercoles"
+                    data-ubicacion="Zona derecha"
+                    data-horario="8:00 AM - 5:00 PM"
+                    data-observacion="Sin observaciones"
+                >
+                    <img src="iconos/integraciones/davison.webp" alt="Davison Arley Valencia">
+                </div>
+
+                <div
+                    class="puesto libre"
+                    data-codigo="P048"
+                    data-puesto="Puesto 12"
+                    data-nombre="Julian Bedoya"
+                    data-area="Integraciones"
+                    data-dia-casa="Martes"
+                    data-ubicacion="Zona derecha"
+                    data-horario="8:00 AM - 5:00 PM"
+                    data-observacion="Sin observaciones"
+                >
+                    <img src="iconos/integraciones/julian.webp" alt="Julian Bedoya">
+                </div>
+
+                <div
+                    class="puesto libre"
+                    data-codigo="P069"
+                    data-puesto="Puesto 06"
+                    data-nombre="David Torres"
+                    data-area="Backend"
+                    data-dia-casa="No tiene"
+                    data-horario="8:00 AM - 5:00 PM"
+                    data-observacion="Sin observaciones"
+                >
+                    <img src="iconos/backend/torres.webp" alt="David Torres">
+                </div>
+
+                <div
+                    class="puesto libre"
+                    data-codigo="P049"
+                    data-puesto="Puesto 11"
+                    data-nombre="David Alvarez"
+                    data-area="Backend"
+                    data-dia-casa="Jueves"
+                    data-ubicacion="Zona derecha"
+                    data-horario="8:00 AM - 5:00 PM"
+                    data-observacion="Sin observaciones"
+                >
+                    <img src="iconos/backend/juanalvarez.webp" alt="David Alvarez">
+                </div>
+
+                <div
+                    class="puesto libre"
+                    data-codigo="P050"
+                    data-puesto="Puesto 07"
+                    data-nombre="Juan Sebastian Fonseca"
+                    data-area="Backend"
+                    data-dia-casa="Jueves"
+                    data-ubicacion="Zona derecha"
+                    data-horario="8:00 AM - 5:00 PM"
+                    data-observacion="Sin observaciones"
+                >
+                    <img src="iconos/backend/fonseca.webp" alt="Juan Sebastian Fonseca">
+                </div>
+
+                <div
+                    class="puesto libre"
+                    data-codigo="P051"
+                    data-puesto="Puesto 10"
+                    data-nombre="Juan Manuel Salazar"
+                    data-area="Backend"
+                    data-dia-casa="Lunes"
+                    data-ubicacion="Zona derecha"
+                    data-horario="8:00 AM - 5:00 PM"
+                    data-observacion="Sin observaciones"
+                >
+                    <img src="iconos/backend/salazar.webp" alt="Juan Manuel Salazar">
+                </div>
+
+                <div
+                    class="puesto libre"
+                    data-codigo="P052"
+                    data-puesto="Puesto 08"
+                    data-nombre="Yonier Ospina Hincapie"
+                    data-area="Front"
+                    data-dia-casa="Martes"
+                    data-ubicacion="Zona derecha"
+                    data-horario="8:00 AM - 5:00 PM"
+                    data-observacion="Sin observaciones"
+                >
+                    <img src="iconos/front/yonier.webp" alt="Yonier Ospina Hincapie">
+                </div>
+
+                <div
+                    class="puesto libre"
+                    data-codigo="P053"
+                    data-puesto="Puesto 09"
+                    data-nombre="Juan David Taborda"
+                    data-area="Backend"
+                    data-dia-casa="Lunes"
+                    data-ubicacion="Zona derecha"
+                    data-horario="8:00 AM - 5:00 PM"
+                    data-observacion="Sin observaciones"
+                >
+                    <img src="iconos/backend/taborda.webp" alt="Juan David Taborda">
+                </div>
+
+            </div>
+
+            <div class="puestos-superiores">
+
+                <div
+                    class="puesto libre"
+                    data-puesto="Puesto 11"
+                    data-nombre="Mariana"
+                    data-area="Incidentes"
+                    data-dia-casa="Varía"
+                    data-ubicacion="Extremo derecho"
+                    data-horario="8:00 AM - 5:00 PM"
+                    data-observacion="Puede llegar a tener 4 personas a la semana, no recomendado."
+                >
+                    <img src="iconos/incidentes/mariana.webp" alt="Variable">
+                </div>
+
+                <div
+                    class="puesto libre"
+                    data-codigo="P054"
+                    data-puesto="Puesto 10"
+                    data-nombre="Jorge"
+                    data-area="Incidentes"
+                    data-dia-casa="Varía"
+                    data-ubicacion="Extremo derecho"
+                    data-horario="8:00 AM - 5:00 PM"
+                    data-observacion="Puede llegar a tener 4 personas a la semana, no recomendado."
+                >
+                    <img src="iconos/incidentes/jorge.webp" alt="Variable">
+                </div>
+
+                <div
+                    class="puesto libre"
+                    data-codigo="P055"
+                    data-puesto="Puesto 09"
+                    data-nombre="Camilo"
+                    data-area="Incidentes"
+                    data-dia-casa="Varía"
+                    data-ubicacion="Extremo derecho"
+                    data-horario="8:00 AM - 5:00 PM"
+                    data-observacion="Puede llegar a tener 4 personas a la semana, no recomendado."
+                >
+                    <img src="iconos/incidentes/camilo.webp" alt="Variable">
+                </div>
+
+            </div>
+
+            <div class="columna-extrema">
+
+                <div
+                    class="puesto libre"
+                    data-codigo="P056"
+                    data-puesto="Puesto 08"
+                    data-nombre="Samuel"
+                    data-area="Incidentes"
+                    data-dia-casa="Varía"
+                    data-ubicacion="Extremo derecho"
+                    data-horario="8:00 AM - 5:00 PM"
+                    data-observacion="Puede llegar a tener 4 personas a la semana."
+                >
+                    <img src="iconos/incidentes/samuel.webp" alt="Variable">
+                </div>
+
+                <div
+                    class="puesto no-reservable lider"
+                    data-codigo="P070"
+                    data-nombre="Deivys"
+                    data-area="Incidentes"
+                    data-motivo="Puesto de líder: reservado exclusivamente para la persona líder del equipo."
+                >
+                    <img src="iconos/incidentes/deivys.webp" alt="">
+                </div>
+
+                <div class="puesto sin-puesto"></div>
+
+                <div
+                    class="puesto no-reservable lider"
+                    data-codigo="P071"
+                    data-nombre="Jerson"
+                    data-area="Integraciones"
+                    data-motivo="Puesto de líder: reservado exclusivamente para la persona líder del equipo."
+                >
+                    <img src="iconos/integraciones/jerson.webp" alt="Jerson">
+                </div>
+
+                <div
+                    class="puesto libre"
+                    data-codigo="P057"
+                    data-puesto="Puesto 05"
+                    data-nombre="Sebastian Rico"
+                    data-area="Integraciones"
+                    data-dia-casa="Lunes"
+                    data-ubicacion="Extremo derecho"
+                    data-horario="8:00 AM - 5:00 PM"
+                    data-observacion="Sin observaciones"
+                >
+                    <img src="iconos/integraciones/rico.webp" alt="Sebastian Rico">
+                </div>
+
+                <div
+                    class="puesto libre"
+                    data-codigo="P058"
+                    data-puesto="Puesto 04"
+                    data-nombre="Nicolas Guato"
+                    data-area="Integraciones"
+                    data-dia-casa="Martes"
+                    data-ubicacion="Extremo derecho"
+                    data-horario="8:00 AM - 5:00 PM"
+                    data-observacion="Sin observaciones"
+                >
+                    <img src="iconos/integraciones/guato.jpg" alt="Nicolas Guato">
+                </div>
+
+                <div
+                    class="puesto libre"
+                    data-codigo="P059"
+                    data-puesto="Puesto 03"
+                    data-nombre="Brayan Tabares"
+                    data-area="Transversal"
+                    data-dia-casa="Martes"
+                    data-ubicacion="Extremo derecho"
+                    data-horario="8:00 AM - 5:00 PM"
+                    data-observacion="Sin observaciones"
+                >
+                    <img src="iconos/transversales/andrey.webp" alt="Brayan Tabares">
+                </div>
+
+                <div
+                    class="puesto libre"
+                    data-codigo="P060"
+                    data-puesto="Puesto 02"
+                    data-nombre="Guillermo Cárdenas"
+                    data-area="Monitoreo"
+                    data-dia-casa="Viernes"
+                    data-ubicacion="Extremo derecho"
+                    data-horario="8:00 AM - 5:00 PM"
+                    data-observacion="Sin observaciones"
+                >
+                    <img src="iconos/monitoreo/guille.webp" alt="Guillermo Cárdenas">
+                </div>
+
+                <div
+                    class="puesto libre"
+                    data-codigo="P061"
+                    data-puesto="Puesto 01"
+                    data-nombre="Karla Ramirez"
+                    data-area="Transversal"
+                    data-dia-casa="Jueves"
+                    data-ubicacion="Extremo derecho"
+                    data-horario="8:00 AM - 5:00 PM"
+                    data-observacion="Sin observaciones"
+                >
+                    <img src="iconos/transversales/karla.webp" alt="Karla Ramirez">
+                </div>
+
+            </div>
+
+            <aside class="sin-puesto-panel" id="sinPuestoPanel">
+    <div class="sin-puesto-encabezado">
+        <div class="sin-puesto-titulo">PERSONAS SIN PUESTO FIJO</div>
+        <button class="sin-puesto-toggle" id="sinPuestoToggle" type="button" aria-expanded="false" aria-controls="sinPuestoLista" title="Mostrar más personas">+</button>
+    </div>
+    <div class="sin-puesto-lista" id="sinPuestoLista">
+        
+    </div>
+</aside>
+
+            <div class="leyenda">
+
+                <div class="leyenda-item">
+                    <span class="icono disponible-icono">♙</span>
+                    <span>DISPONIBLE PARA RESERVA</span>
+                </div>
+
+                <div class="leyenda-item">
+                    <span class="icono reservado-icono">♙</span>
+                    <span>RESERVADO</span>
+                </div>
+
+                <div class="leyenda-item">
+                    <span class="icono no-icono">×</span>
+                    <span>
+                        NO RESERVABLE
+                        <br>
+                        (PUESTO DE LÍDER)
+                    </span>
+                </div>
+
+            </div>
+
+        </main>
+
+        </div>
+
+    </div>
+
+    <div class="modal" id="modal">
+
+        <div class="modal-contenido">
+
+            <div class="foto-modal" id="contenedorFoto">
+                <img
+                    id="modalFoto"
+                    src=""
+                    alt="Foto de la persona"
+                >
+            </div>
+
+            <div class="datos-modal">
+
+                <button
+                    class="cerrar"
+                    id="cerrar"
+                    type="button"
+                >
+                    ×
+                </button>
+
+                <h2 id="tituloPuesto">
+                    Puesto
+                </h2>
+
+                <p id="estadoPuesto">
+                    Estado
+                </p>
+
+                <div class="informacion-modal">
+
+                    <p>
+                        <strong>Nombre:</strong>
+                        <span id="modalNombre">-</span>
+                    </p>
+
+                    <p>
+                        <strong>Área:</strong>
+                        <span id="modalArea">-</span>
+                    </p>
+
+                    <p>
+                        <strong>Día desde casa:</strong>
+                        <span id="modalDiaCasa">-</span>
+                    </p>
+
+                    <p>
+                        <strong>Horario:</strong>
+                        <span id="modalHorario">-</span>
+                    </p>
+
+                    <p>
+                        <strong>Observación:</strong>
+                        <span id="modalObservacion">-</span>
+                    </p>
+
+                </div>
+
+                <button
+                    id="reservarBtn"
+                    type="button"
+                >
+                    RESERVAR PUESTO
+                </button>
+
+                <button
+                    id="cancelarReservaBtn"
+                    class="cancelar-reserva"
+                    type="button"
+                >
+                    CANCELAR RESERVA
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="modal" id="modalReserva">
+
+        <div class="modal-contenido modal-reserva">
+
+            <button
+                class="cerrar"
+                id="cerrarReserva"
+                type="button"
+            >
+                ×
+            </button>
+
+            <div class="icono-reserva">
+                ♙
+            </div>
+
+            <h2>
+                RESERVAR PUESTO
+            </h2>
+
+            <p class="texto-reserva">
+                Vas a reservar el
+                <strong id="puestoReservaTexto">
+                    Puesto
+                </strong>
+            </p>
+
+            <label for="nombreReserva">
+                NOMBRE
+            </label>
+
+            <input
+                type="text"
+                id="nombreReserva"
+                placeholder="Escribe tu nombre"
+                autocomplete="off"
+            >
+
+            <label for="areaReserva">
+                ÁREA
+            </label>
+
+            <input
+                type="text"
+                id="areaReserva"
+                placeholder="Escribe tu área"
+                autocomplete="off"
+            >
+
+            <label for="claveReserva">
+                CLAVE DE RESERVA
+            </label>
+
+            <input
+                type="password"
+                id="claveReserva"
+                placeholder="Crea una clave para cancelar"
+                minlength="4"
+                maxlength="72"
+                autocomplete="new-password"
+            >
+
+            <div class="acciones-reserva">
+
+                <button
+                    type="button"
+                    id="cancelarFormulario"
+                    class="btn-secundario"
+                >
+                    CANCELAR
+                </button>
+
+                <button
+                    type="button"
+                    id="confirmarReserva"
+                    class="btn-confirmar"
+                >
+                    CONFIRMAR RESERVA
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="modal" id="modalCancelar">
+
+        <div class="modal-contenido modal-cancelar">
+
+            <button
+                class="cerrar"
+                id="cerrarCancelar"
+                type="button"
+            >
+                ×
+            </button>
+
+            <div class="icono-cancelar">
+                ×
+            </div>
+
+            <h2>
+                CANCELAR RESERVA
+            </h2>
+
+            <p>
+                Ingresa los datos usados al reservar para confirmar la cancelación.
+            </p>
+
+            <label for="nombreCancelacion">
+                NOMBRE DE LA RESERVA
+            </label>
+
+            <input
+                type="text"
+                id="nombreCancelacion"
+                placeholder="Escribe el nombre"
+                autocomplete="off"
+            >
+
+            <label for="areaCancelacion">
+                ÁREA DE LA RESERVA
+            </label>
+
+            <input
+                type="text"
+                id="areaCancelacion"
+                placeholder="Escribe el área"
+                autocomplete="off"
+            >
+
+            <label for="claveCancelacion">
+                CLAVE DE RESERVA
+            </label>
+
+            <input
+                type="password"
+                id="claveCancelacion"
+                placeholder="Escribe la clave"
+                minlength="4"
+                maxlength="72"
+                autocomplete="current-password"
+            >
+
+            <div class="acciones-reserva">
+
+                <button
+                    type="button"
+                    id="mantenerReserva"
+                    class="btn-secundario"
+                >
+                    MANTENER
+                </button>
+
+                <button
+                    type="button"
+                    id="confirmarCancelacion"
+                    class="btn-cancelar"
+                >
+                    CANCELAR RESERVA
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="funciona.js?v=20260920"></script>
+
+</body>
+</html>
