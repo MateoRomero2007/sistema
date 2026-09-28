@@ -282,7 +282,3 @@ INSERT INTO usuario (nombre, cargo, area, dia_casa, horario, foto, estado) VALUE
 ('Julian Muñoz', 'Sin puesto fijo', 'Inteligencia Artificial', 'No aplica', 'No aplica', 'iconos/Inteligencia artificial/julianIA.webp', TRUE),
 ('Luis Angel Cordoba', 'Sin puesto fijo', 'Integraciones', 'Aún no definido', 'No aplica', 'iconos/integraciones/luis_cordoba.webp', TRUE);
 
-
--- Personas sin puesto fijo se pueden agregar posteriormente a usuario.
--- Al no tener un registro en puesto.id_usuario, aparecerán automáticamente en el panel lateral.
-

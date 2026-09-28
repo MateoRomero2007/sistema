@@ -36,6 +36,8 @@
     const sinPuestoToggle = document.getElementById("sinPuestoToggle");
     const mapaEscala = document.querySelector(".mapa-escala");
     const mapa = document.querySelector(".mapa");
+    const syncEstado = document.getElementById("syncEstado");
+    const syncTexto = document.getElementById("syncTexto");
     const tooltip = document.createElement("div");
     tooltip.className = "tooltip-puesto";
     tooltip.setAttribute("role", "status");
@@ -364,6 +366,63 @@
         actualizarEstados();
     }
 
+    // --- Sincronización automática en segundo plano ---
+    // Mantiene el mapa al día en todas las pestañas/pantallas abiertas sin
+    // recargar la página (nada de autorefresh): sólo vuelve a pedir los
+    // datos por AJAX y refresca el estado visual de los puestos.
+    const INTERVALO_SYNC_MS = 8000;
+    let sincronizando = false;
+    let temporizadorSync = null;
+
+    function marcarEstadoSync(estado) {
+        if (!syncEstado || !syncTexto) return;
+        syncEstado.classList.remove("sync-error", "sync-actualizando");
+        if (estado === "actualizando") {
+            syncEstado.classList.add("sync-actualizando");
+            syncTexto.textContent = "Actualizando…";
+        } else if (estado === "error") {
+            syncEstado.classList.add("sync-error");
+            syncTexto.textContent = "Sin conexión";
+        } else {
+            const hora = new Date().toLocaleTimeString("es-CO", { hour: "2-digit", minute: "2-digit" });
+            syncTexto.textContent = `Sincronizado · ${hora}`;
+        }
+    }
+
+    async function sincronizarSilencioso() {
+        if (sincronizando) return;
+        sincronizando = true;
+        marcarEstadoSync("actualizando");
+        try {
+            await cargarDatos();
+            marcarEstadoSync("ok");
+        } catch (error) {
+            console.error("Sincronización automática fallida:", error);
+            marcarEstadoSync("error");
+        } finally {
+            sincronizando = false;
+        }
+    }
+
+    function iniciarSincronizacion() {
+        if (temporizadorSync) return;
+        temporizadorSync = setInterval(sincronizarSilencioso, INTERVALO_SYNC_MS);
+    }
+
+    function detenerSincronizacion() {
+        clearInterval(temporizadorSync);
+        temporizadorSync = null;
+    }
+
+    document.addEventListener("visibilitychange", () => {
+        if (document.hidden) {
+            detenerSincronizacion();
+        } else {
+            sincronizarSilencioso();
+            iniciarSincronizacion();
+        }
+    });
+
     function actualizarFecha() {
         if (fechaHoy) fechaHoy.textContent = `RESERVAS PARA: ${formatearFecha(fechaReserva).toUpperCase()}`;
     }
@@ -402,8 +461,14 @@
     ajustarEscalaMapa();
     window.addEventListener("resize", ajustarEscalaMapa);
 
-    cargarDatos().catch(error => {
-        console.error(error);
-        alert("No se pudo conectar con PHP/MySQL. Revisa XAMPP y conexion.php.");
-    });
+    cargarDatos()
+        .then(() => {
+            marcarEstadoSync("ok");
+            if (!document.hidden) iniciarSincronizacion();
+        })
+        .catch(error => {
+            console.error(error);
+            marcarEstadoSync("error");
+            alert("No se pudo conectar con PHP/MySQL. Revisa XAMPP y conexion.php.");
+        });
 })();

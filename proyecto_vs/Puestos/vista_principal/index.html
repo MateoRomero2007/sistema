@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acceso al mapa de puestos</title>
+  <link rel="stylesheet" href="style.css?v=20260919">
+</head>
+<body>
+
+  <div id="splash-screen">
+    <div class="splash-orbit splash-orbit-one"></div>
+    <div class="splash-orbit splash-orbit-two"></div>
+    <img src=" https://virtualsoftlatam.com/wp-content/uploads/2025/08/Acercade_responsive.png " alt="Logo de Virtualsoft" class="zoom-logo">
+    <span class="splash-status">CARGANDO MAPA DE PUESTOS</span>
+  </div>
+
+  <main id="main-content" class="hidden">
+    <div class="mapa-ambiente" aria-hidden="true">
+      <span class="mapa-linea linea-horizontal"></span>
+      <span class="mapa-linea linea-vertical"></span>
+      <span class="mapa-nodo nodo-uno"></span>
+      <span class="mapa-nodo nodo-dos"></span>
+      <span class="mapa-nodo nodo-tres"></span>
+      <span class="mapa-nodo nodo-cuatro"></span>
+      <span class="mapa-nodo nodo-cinco"></span>
+      <span class="mapa-nodo nodo-seis"></span>
+    </div>
+
+    <section class="bienvenida" aria-labelledby="tituloBienvenida">
+      <div class="marca">
+      <img src="../imagenes/logo.webp" alt="Logo">
+      </div>
+      <p class="etiqueta">SISTEMA INTERNO ENFOCADO EN T.I</p>
+      <h1 id="tituloBienvenida">Gestiona y reserva tu<br><em> próximo puesto de trabajo</em></h1>
+      <p class="descripcion">Mira todos los puestos disponibles y elige el que más te guste</p>
+      <a class="puestos-link" href="../index.html">
+        <span>Ver mapa de puestos</span>
+        <span class="link-arrow" aria-hidden="true">&#8594;</span>
+      </a>
+      <div class="datos-sistema" aria-label="Información del sistema">
+        <span><strong class="punto-activo"></strong>Recuerda los datos con que reservas <br>
+           serán necesarios en caso de cancelar
+        </span>
+      </div>
+    </section>
+    <aside class="resumen-lateral" aria-label="Resumen del mapa">
+      <span class="resumen-linea"></span>
+      <p>ZONA<br><strong>TI </strong></p>
+      <p class="resumen-dato">ÁREAS<br><strong>11</strong></p>
+      <p class="resumen-dato">PUESTOS<br><strong>71</strong></p>
+    </aside>
+  </main>
+
+  <script src="script.js?v=20260920"></script>
+</body>
+</html>
